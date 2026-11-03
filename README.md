@@ -1,5 +1,11 @@
 # Semi-Automated Knowledge Engineering and Process Mapping for Total Airport Management
 
+### ▶ [Open all 16 generated swimlanes in your browser](https://viewer.diagrams.net/?highlight=0000ff&nav=1&layers=1&title=airport_swimlanes.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fdarrylteo%2FautoKE%2Fmain%2Fresults%2Fairport_swimlanes.drawio)
+
+[![Swimlane diagram generated from the knowledge graph for A-CDM Milestone 1, ATC Flight Plan Activated, with one lane per stakeholder](docs/swimlanes.png)](https://viewer.diagrams.net/?highlight=0000ff&nav=1&layers=1&title=airport_swimlanes.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fdarrylteo%2FautoKE%2Fmain%2Fresults%2Fairport_swimlanes.drawio)
+
+Milestone 1 of the EUROCONTROL A-CDM manual, drawn automatically from triples an LLM extracted from the text. Every box traces back to its source sentence.
+
 This repository provides a framework for **scaffolded symbolic fusion**, bridging the gap between unstructured aviation documentation and machine-readable Knowledge Graphs (KGs). By leveraging expert-curated ontological structures to guide Large Language Model (LLM) extraction, this pipeline enables the automated synthesis of domain-grounded operational models with high semantic fidelity and verifiable data provenance.
 
 Code for the paper presented at the 29th International Conference on Information Fusion (FUSION 2026), Trondheim, Norway. Paper: [arXiv:2603.26076](https://arxiv.org/abs/2603.26076).
