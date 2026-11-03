@@ -2,6 +2,29 @@
 
 This repository provides a framework for **scaffolded symbolic fusion**, bridging the gap between unstructured aviation documentation and machine-readable Knowledge Graphs (KGs). By leveraging expert-curated ontological structures to guide Large Language Model (LLM) extraction, this pipeline enables the automated synthesis of domain-grounded operational models with high semantic fidelity and verifiable data provenance.
 
+Code for the paper presented at the 29th International Conference on Information Fusion (FUSION 2026), Trondheim, Norway. Paper: [arXiv:2603.26076](https://arxiv.org/abs/2603.26076).
+
+---
+## Results in Brief
+Evaluated against an expert-curated ground truth of the 16 EUROCONTROL A-CDM milestones (about 10k tokens), Gemini 2.5 Flash through LangExtract reaches:
+
+| Inference | Precision | Recall | F1 |
+|---|---|---|---|
+| Page level (short context) | 0.959 | 0.970 | 0.964 |
+| Document level (long context) | 0.966 | 0.981 | 0.974 |
+
+Document-level processing cut missed triples by 38.5% (13 to 8), because most procedural dependencies in the manual span a few pages. Every extracted triple is anchored to its source sentence, and the swimlane diagrams are generated from the KG deterministically.
+
+---
+## Quick Start
+```bash
+pip install -r requirements.txt
+cd src
+python get_triples_lang.py              # set LANGEXTRACT_API_KEY in the script first (a free Gemini API key works)
+python triples_to_KG_and_swimlanes.py   # writes the .owl KG and the .drawio swimlanes from the triples
+```
+The extracted triples and generated outputs are already in `data/` and `results/`, so the second step runs without an API key.
+
 ---
 ## Workflow Overview
 The pipeline transitions from unstructured technical corpora to deterministic process models through three primary stages:
